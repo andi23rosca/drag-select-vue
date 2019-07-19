@@ -2,13 +2,15 @@
 
 Simple Vue library that enables drag to select functionality.
 
+Live demo [here](https://andi23rosca.github.io/drag-select-vue/)
+
 ## Installation
 
 ```
   npm install drag-select-vue
 ```
 
-## Use
+## Usage
 
 ```
 import DragSelect from "drag-select-vue";
