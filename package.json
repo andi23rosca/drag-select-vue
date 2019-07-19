@@ -1,16 +1,26 @@
 {
   "name": "drag-select-vue",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.4.0",
+  "main": "./dist/drag-select-vue.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name \"drag-select-vue\" ./src/DragSelect.vue"
   },
   "dependencies": {
     "core-js": "^2.6.5",
     "vue": "^2.6.10"
   },
+  "keywords": [
+    "vue",
+    "drag",
+    "select",
+    "simple",
+    "easy",
+    "component"
+  ],
+  "license": "MIT",
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.9.0",
     "@vue/cli-plugin-eslint": "^3.9.0",
@@ -20,6 +30,13 @@
     "eslint-plugin-vue": "^5.0.0",
     "vue-template-compiler": "^2.6.10"
   },
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js"
+  ],
   "eslintConfig": {
     "root": true,
     "env": {

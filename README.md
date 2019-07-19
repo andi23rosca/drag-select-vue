@@ -1,29 +1,25 @@
 # drag-select-vue
 
-## Project setup
+Simple Vue library that enables drag to select functionality.
+
+## Installation
+
 ```
-npm install
+  npm install drag-select-vue
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Use
 
-### Compiles and minifies for production
 ```
-npm run build
-```
+import DragSelect from "drag-select-vue";
 
-### Run your tests
+//In your template
+<drag-select attribute="userDefinedAttributeName" color="blue" :opacity="0.8">
+  <template v-slot="{ selected }">
+    <p userDefinedAttributeName="first"
+       :class="{'blue-text': selected.includes('first')}">Item 1</p>
+    <p userDefinedAttributeName="second"
+       :class="{'blue-text': selected.includes('second')}">Item 2</p>
+  </template>
+</drag-select>
 ```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
