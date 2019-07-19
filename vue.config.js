@@ -1,4 +1,4 @@
-module.exports = {
-  outputDir: "./docs",
-  publicPath: "/drag-select-vue/"
-}
+// module.exports = {
+//   outputDir: "./docs",
+//   publicPath: "/drag-select-vue/"
+// }

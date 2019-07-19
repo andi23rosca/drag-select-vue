@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto mt-32">
+  <div class="container mx-auto mt-32 px-4">
     <div class="text-green-500 text-2xl font-semibold mb-20">
       Drag select Vue demo
     </div>
