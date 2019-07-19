@@ -2,7 +2,7 @@
   <div
     id="container"
     ref="container"
-    style="position: relative; user-select: none"
+    style="position: relative; user-select: none; overflow: hidden;"
   >
     <slot v-bind="{ selected: intersected }" />
   </div>
