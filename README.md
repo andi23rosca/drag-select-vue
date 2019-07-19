@@ -30,7 +30,7 @@ export default {
 
 Drag select uses an attribute prop to identify the children that it can select. Make sure to pass the custom name to the frag-select component and also that the children inside have the attribute set with an unique identifier for each one.
 
-For example, these divs have the "customAttribute set on them with the values 1, 2, and 3
+For example, these divs have the "customAttribute" set on them with the values 1, 2, and 3
 
 ```html
 <drag-select attribute="customAttribute">
