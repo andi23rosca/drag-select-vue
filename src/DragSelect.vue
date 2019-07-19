@@ -94,6 +94,7 @@ export default {
     }
 
     function startDrag(e) {
+      containerRect = container.getBoundingClientRect();
       children = container.childNodes;
       start = getCoords(e);
       end = start;
