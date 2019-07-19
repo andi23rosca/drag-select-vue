@@ -19,7 +19,7 @@ Run the demo locally by cloning [this](https://github.com/andi23rosca/drag-selec
 
 ## Usage
 Import the component and register it in your own component.
-```
+```javascript
 import DragSelect from "drag-select-vue";
 
 export default {
@@ -30,9 +30,10 @@ export default {
 
 Drag select uses an attribute prop to identify the children that it can select. Make sure to pass the custom name to the frag-select component and also that the children inside have the attribute set with an unique identifier for each one.
 
-```
+For example, these divs have the "customAttribute set on them with the values 1, 2, and 3
+
+```html
 <drag-select attribute="customAttribute">
-  // For example, these divs have the "customAttribute set on them with the values 1, 2, and 3
   <div v-for="item in [1,2,3]" :customAttribute="item" />
 </drag-select>
 ```
@@ -44,13 +45,14 @@ There are 2 ways in which you can get access to the selected values.
 
 Use this method if you don't need access to the list from outside the component, for example if you just want to set some styling on the selected children.
 
-```
-//selected is a list of strings because html attributes 
-//are stored as strings no matter the original type. 
-//That is why the includes method needs a string 
-//conversion to be correct even though the original
-//item set on the attribute is a number
+Selected is a list of strings because html attributes 
+are stored as strings no matter the original type. 
 
+That is why the includes method needs a string 
+conversion to be correct even though the original
+item set on the attribute is a number
+
+```html
 <drag-select attribute="attr">
   <template v-slot="{ selected }">
     <div v-for="item in [1,2,3]" 
@@ -65,7 +67,7 @@ Use this method if you don't need access to the list from outside the component,
 
 Use this when you need access to the list of selected items outside of the drag select component
 
-```
+```javascript
 <div>
   <drag-select attribute="attr" @change="selected = $event">
       <div v-for="item in [1,2,3]" 
