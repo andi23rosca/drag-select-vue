@@ -1,6 +1,7 @@
 # drag-select-vue
 
 Simple Vue library that enables drag to select functionality.
+P.S. It works with touchscreens too!
 
 Live demo [here](https://andi23rosca.github.io/drag-select-vue/)
 
