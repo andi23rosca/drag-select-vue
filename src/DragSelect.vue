@@ -87,9 +87,11 @@ export default {
     }
 
     function touchStart(e) {
+      e.preventDefault();
       startDrag(e.touches[0]);
     }
     function touchMove(e) {
+      e.preventDefault();
       drag(e.touches[0]);
     }
 
