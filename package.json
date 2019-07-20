@@ -1,7 +1,11 @@
 {
   "name": "drag-select-vue",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "main": "./dist/drag-select-vue.common.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andi23rosca/drag-select-vue"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
