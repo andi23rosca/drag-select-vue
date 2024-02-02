@@ -68,20 +68,13 @@ export default {
 
     function intersection() {
       const rect = box.getBoundingClientRect();
-      const intersected = [];
-
-      for (let i = 0; i < children.length; i++) {
-        if (collisionCheck(rect, children[i].getBoundingClientRect())) {
-          const attr = children[i].getAttribute(self.attribute);
-          if (children[i].hasAttribute(self.attribute)) {
-            intersected.push(attr);
-          }
-        }
-      }
+      const intersected = children
+        .filter((c) => collisionCheck(rect, c.getBoundingClientRect()))
+        .map((c) => c.getAttribute(self.attribute));
 
       if (
-        JSON.stringify([...intersected]) !==
-        JSON.stringify([...self.intersected])
+        intersected.length !== self.intersected.length ||
+        intersected.some((i) => !self.intersected.includes(i))
       )
         self.intersected = intersected;
     }
@@ -97,7 +90,7 @@ export default {
 
     function startDrag(e) {
       containerRect = container.getBoundingClientRect();
-      children = container.childNodes;
+      children = Array.from(container.querySelectorAll(`[${self.attribute}]`));
       start = getCoords(e);
       end = start;
       document.addEventListener("mousemove", drag);
